@@ -1,4 +1,4 @@
-package com.techelevator.Demos;
+package com.hunterscode.Demos;
 
 import java.util.Arrays;
 import java.util.Scanner;

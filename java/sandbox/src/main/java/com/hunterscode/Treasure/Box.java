@@ -1,4 +1,4 @@
-package com.techelevator.Treasure;
+package com.hunterscode.Treasure;
 
 public interface Box {
     int open();

@@ -1,4 +1,4 @@
-package com.techelevator.game;
+package com.hunterscode.game;
 
 public class Zombie {
     private String name = "Zombie";
@@ -49,16 +49,19 @@ public class Zombie {
     public void damage(int damage) {
         hitpoints -= damage;
         if (hitpoints > 0){
+            System.out.println();
             System.out.println(name + " gets hit for " + damage + " hit points!");
         } else {
             isDead = true;
             hitpoints = 0;
+            System.out.println();
             System.out.println(name + " is conquered and falls to the ground!!!");
         }
     }
 
     public void attackPlayer(Player player) {
-        int damage = (int)(Math.random()* 5) + 1;
+        int damage = (int)(Math.random()* 5) + 5;
+        System.out.println();
         System.out.println(name + " snarls at " + player.getName() + " and swipes and claws at his face.");
         player.damage(this, damage);
     }

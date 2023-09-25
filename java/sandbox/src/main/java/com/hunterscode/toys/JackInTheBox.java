@@ -1,4 +1,4 @@
-package com.techelevator.toys;
+package com.hunterscode.toys;
 
 public class JackInTheBox {
     int numberOfCranks = 0;
@@ -32,5 +32,21 @@ public class JackInTheBox {
        isOpen = true;
        System.out.println("Jack SPRINGS FORTH AND SCREAMS!");
    }
+
+    private static void playJackInTheBox() {
+        JackInTheBox jack = new JackInTheBox();
+        jack.closeLid();
+        for (int i = 0; i < 10; i++){
+            jack.turnCrank();
+        }
+        jack.closeLid();
+        for (int i = 0; i < 5; i++){
+            jack.turnCrank();
+        }
+    }
+
+    public static void main(String[] args) {
+        playJackInTheBox();
+    }
 
 }

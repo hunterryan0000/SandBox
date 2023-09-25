@@ -1,4 +1,4 @@
-package com.techelevator.game;
+package com.hunterscode.game;
 
 public class Player {
     private String name;
@@ -35,20 +35,25 @@ public class Player {
 
     public void attackZombie(Zombie zombie) {
         int damage = getDamage();
+        System.out.println();
         System.out.println(name + " attacks with his " + weapon + "!");
         zombie.damage(damage);
     }
 
     public void damage(Zombie zombieAttacker, int damage) {
-        int dodgeRoll = (int)Math.random() * 6 + 1;
-        if (dodgeRoll >= 3){
+// Add 1 to change the range to between 1 and 10 (inclusive)
+        int dodgeRoll = (int) (Math.random() * 10) + 1; //Math.random() - 0-1
+        if (dodgeRoll >= 5){
+            System.out.println();
             System.out.println(name + " adeptly dodges to his right, sneers and strikes back!");
             int heroDamage = getDamage();
             zombieAttacker.damage(heroDamage);
         } else {
+            System.out.println();
             System.out.println(name + " get hit in the face and loses " + damage + " hit points!");
             hitPoints -= damage;
             if (hitPoints <= 0){
+                System.out.println();
                 System.out.println(name + " has been beaten like he owed the zombie money!   Game Over...");
             }
         }
@@ -56,9 +61,9 @@ public class Player {
 
     private int getDamage() {
         switch(weapon.toUpperCase()) {
-            case("BATTLE AXE"): return 25;
-            case("BROAD SWORD"): return 20;
-            case("SHORT SWORD"): return 15;
+            case("BATTLE AXE"): return 20;
+            case("BROAD SWORD"): return 15;
+            case("SHORT SWORD"): return 10;
             default: return 5;
         }
     }

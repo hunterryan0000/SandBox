@@ -1,21 +1,23 @@
-package com.techelevator.game;
+package com.hunterscode.game;
 
-import com.techelevator.toys.JackInTheBox;
+import com.hunterscode.toys.JackInTheBox;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Game {
     public static void main(String[] args) {
         Player player = new Player();
-        player.setName("Maher the Conquerer");
+        player.setName("Ryan the Hunter");
         player.setHitPoints(75);
-        player.setWeapon("Battle Axe");
+
+        player.setWeapon(ListOfWeapons.whatsMyWeapon()); // Battle Axe, Broad Sword, Short Sword
 
         List<Zombie> zombies = new ArrayList<>();
-        zombies.add(new Zombie("Shawn", 100));
-        zombies.add(new Zombie("James", 99));
-        zombies.add( new Zombie("Jerry", 98));
+        zombies.add(new Zombie("Zombie1", 100));
+        zombies.add(new Zombie("Zombie2", 99));
+        zombies.add( new Zombie("Zombie3", 98));
         zombies.add(new Zombie());
 
         for (Zombie z: zombies){
@@ -37,6 +39,9 @@ public class Game {
         }
 
         if (!player.isDead()){
+            System.out.println();
+            System.out.println("CONGRATULATIONS LEVEL 1 BEATEN");
+            System.out.println();
             System.out.println(player.getName() + " is standing amongst the limbs of his enemies as he walks into the sunset.");
         }
 
@@ -44,15 +49,4 @@ public class Game {
 
     }
 
-    private static void playJackInTheBox() {
-        JackInTheBox jack = new JackInTheBox();
-        jack.closeLid();
-        for (int i = 0; i < 10; i++){
-            jack.turnCrank();
-        }
-        jack.closeLid();
-        for (int i = 0; i < 5; i++){
-            jack.turnCrank();
-        }
-    }
 }

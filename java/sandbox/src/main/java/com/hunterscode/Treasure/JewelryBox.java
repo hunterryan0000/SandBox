@@ -1,4 +1,4 @@
-package com.techelevator.Treasure;
+package com.hunterscode.Treasure;
 
 public class JewelryBox implements Box{
         @Override

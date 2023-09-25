@@ -1,4 +1,4 @@
-package com.techelevator.Demos;
+package com.hunterscode.Demos;
 
 public class Program2 {
     public static void main(String[] args) {
