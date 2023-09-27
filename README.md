@@ -17,20 +17,18 @@ This project serves as a sandbox for various demos, data structure implementatio
 - **Treasure-Box**: Abstraction and Polymophism print outs
 
 ## Installation
+```bash
 git clone https://github.com/yourusername/Sandbox.git
-
 cd Sandbox
+```
 
 ## Usage
+```bash
 cd Demos/Demo
-
 cd Demos/Program
-
 cd Demos/Program2
-
 
 cd game/Game
 
-
 cd toys/JackInTheBox
-
+```
